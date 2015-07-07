@@ -6,8 +6,8 @@ option(BUILD_TESTS "Build tests." ON)
 
 ## Kernel binary path
 set(OPENCL_KERNEL_BINARY_PATH "" CACHE STRING "Directory to put kernel binaries in. Default is source dir.")
-# Remove any existing "
-string(REPLACE "\"" "" OPENCL_KERNEL_BINARY_PATH ${OPENCL_KERNEL_BINARY_PATH})
+## # Remove any existing "
+## string(REPLACE "\"" "" OPENCL_KERNEL_BINARY_PATH ${OPENCL_KERNEL_BINARY_PATH})
 message("-- OpenCL Kernel binary path set to: ${OPENCL_KERNEL_BINARY_PATH}")
 add_definitions("-DOUL_OPENCL_KERNEL_BINARY_PATH=\"${OPENCL_KERNEL_BINARY_PATH}\"")
 
